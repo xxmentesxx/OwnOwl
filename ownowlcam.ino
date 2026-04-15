@@ -19,8 +19,8 @@
 #include <ArduinoOTA.h>
 
 // --- 1. WI-FI BİLGİLERİ ---
-const char* ssid = "COMOLOKKO 2.4";
-const char* password = "papipapi-135246";
+const char* ssid = "";
+const char* password = "";
 
 // --- 2. DONANIM PİNLERİ ---
 // EKRAN (Pin 1-5)
