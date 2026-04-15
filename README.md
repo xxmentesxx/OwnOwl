@@ -1,42 +1,55 @@
-# Cyber Owl - ESP32-CAM AI Face Tracking Robot 🦉
+OwnOwl - 3D Pet 🦉
+OwnOwl is a smart, AI-powered desktop companion designed to track movement and interact with users through expressive eyes and sound. It uses a dual-microcontroller architecture to handle complex AI vision tasks and smooth mechanical animations simultaneously.
 
-## Overview
-Cyber Owl is an interactive, AI-powered desktop companion designed to track your face. This repository contains the Arduino code (ESP32-CAM) and hardware details for the project.
+📺 Video Demonstration
+Watch the OwnOwl in action on YouTube:
+[Buraya YouTube Linkini Yapıştır]
 
-The system uses an ESP32-CAM hidden in the owl's beak. It continuously scans for faces using AI algorithms and controls a motorized gear system to rotate the head, following the person left or right.
+📥 3D Models (Creality Cloud)
+Download the 3D printable parts here:
+[Buraya Creality Cloud Linkini Yapıştır]
 
-## 📺 Video Demonstration
-Watch the Cyber Owl in action on YouTube:
-[https://youtube.com/shorts/lT2aZSD9aYQ?feature=share]
+🛠 Hardware Components (BOM)
+To build your own OwnOwl, you will need the following parts:
 
-## 📥 3D Models (Creality Cloud)
-You can download the STL files for the 3D printed parts on my Creality Cloud profile:
-[Insert Creality Cloud Link Here]
+Main Brain: ESP32-S3 (Controls screens, motor, and sound)
 
-## Features
-* **AI Face Tracking:** Utilizes human face detection algorithms (MSR01/MNP01) to calculate face coordinates.
-* **Motorized Movement:** Directs a motor (Left/Right/Center) based on the face's X-axis position.
-* **OTA Support:** Includes ArduinoOTA for wireless code updates.
+AI Vision: ESP32-CAM (AI-Thinker module for face tracking)
 
-## Hardware Components (BOM)
-* ESP32-CAM (AI-Thinker module)
-* 18650 Battery & Charge Module
-* Small DC/Stepper Motor
-* 2x Small TFT Display Screens (for eyes)
-* Speaker (for sound effects)
+Eyes: 2x Small TFT Display Screens (Compatible with LovyanGFX)
 
-## ⚠️ Important Note on 3D Models (WIP / Experimental)
-If you are planning to 3D print the body, please note that this is a **V1 Experimental** design. 
-The current 3D model does not perfectly fit the eye screens. You will likely need to manually cut/sand the edges of the eye sockets or remix the STL files to make your specific screens fit. 
+Motion: 1x Small Stepper or DC Motor (with gear system)
 
-## Code Setup
-1. Open the `.ino` file in the Arduino IDE.
-2. Install the required ESP32 board managers and camera libraries.
-3. Update the Wi-Fi credentials in the code (If using OTA updates):
-   ```cpp
-   const char* ssid = "YOUR_WIFI_SSID";
-   const char* password = "YOUR_WIFI_PASSWORD";
+Sound: I2S Speaker (For "Woho" and alarm sounds)
 
-4c Flash the code to your ESP32-CAM board.
+Power: 18650 Lithium Battery & TP4056 (or similar) Charging Module
 
-Feel free to fork, remix, and improve the project!
+Body: 3D Printed OwnOwl chassis
+
+📡 Connectivity & OTA
+The Wi-Fi connection in this project is exclusively for Wireless Code Updates (ArduinoOTA).
+
+The robot's AI tracking and interactions work completely offline (no internet required).
+
+Wi-Fi allows you to flash new code to the ESP32-S3 and ESP32-CAM without opening the 3D printed body and using cables.
+
+⚠️ Important Note: Experimental V1 Design
+Please be aware that this is a Work in Progress (V1) version:
+
+Mechanical Fit: The current 3D model may require manual sanding or cutting around the eye sockets to fit the screens perfectly.
+
+DIY Effort: This project requires soldering, basic electronics knowledge, and manual assembly of the internal gear system.
+
+💻 Code Structure
+OWNOWL_V2.1.ino: Upload this to the ESP32-S3. It handles the eyes, sound, and mechanical tracking.
+
+OWNOWL_Kamera.ino (previously main.cpp): Upload this to the ESP32-CAM. It handles the AI face detection.
+
+Setup Instructions
+Install ESP32 Board Manager in Arduino IDE.
+
+Install required libraries: LovyanGFX, Stepper, and ESP32 Camera libraries.
+
+Update Wi-Fi credentials (only if you want to use wireless updates).
+
+Flash the boards and connect them via UART (TX/RX).
