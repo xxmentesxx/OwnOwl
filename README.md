@@ -8,7 +8,7 @@ Watch OwnOwl in action on YouTube:
 
 ## 📥 Get the 3D Files
 Download the STL models from Creality Cloud:
-[Creality Cloud Linkinizi Buraya Yapıştırın]
+[](https://www.crealitycloud.com/flowprint/model-detail/69dfc804043ef052a5274bd5)
 
 ## 🛠 Hardware List (BOM)
 * **Main Controller:** ESP32-S3 (Handles screens, motor, and sound)
