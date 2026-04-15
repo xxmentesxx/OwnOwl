@@ -36,3 +36,7 @@ The current 3D model does not perfectly fit the eye screens. You will likely nee
    ```cpp
    const char* ssid = "YOUR_WIFI_SSID";
    const char* password = "YOUR_WIFI_PASSWORD";
+
+4c Flash the code to your ESP32-CAM board.
+
+Feel free to fork, remix, and improve the project!
